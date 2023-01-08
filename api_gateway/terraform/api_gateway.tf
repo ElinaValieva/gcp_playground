@@ -64,6 +64,6 @@ resource "google_api_gateway_gateway" "gw" {
   depends_on = [google_api_gateway_api_config.api_cfg]
 }
 
-output "gateway_url" {
+output "gateway_api_public" {
   value = "https://${google_api_gateway_gateway.gw.default_hostname}"
 }
